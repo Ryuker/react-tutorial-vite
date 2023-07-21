@@ -5,6 +5,6 @@ uses node 16.14.2
 run nvm use 16
 run npm run dev
 
-project is using vite with typescript support. 
+project is using vite with typescript support + SWC (Speedy Web Compiler)
 runs on localhost:3000
 
