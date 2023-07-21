@@ -1,22 +1,19 @@
-import { useState } from 'react'
-import TestComponent from './components/TestComponent'
+import Counter from './components/Counter'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <h1>My First React App</h1>
       <h2>~ Joeri</h2>
-      <TestComponent />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>click counter button to increment count</p>
+      <Counter />
+      <span>powered by:</span>
+      <div>
+        <a target="_blank" href="https://vitejs.dev/"><img  src={viteLogo} className="logo" alt="Vite logo"/></a> 
+        <a target="_blank" href="https://react.dev/"><img  src={reactLogo} className="logo react" alt="React logo"/></a>
       </div>
     </>
   )
