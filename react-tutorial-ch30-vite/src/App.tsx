@@ -1,4 +1,5 @@
 import Counter from './components/Counter'
+import TodoWidget from './components/TodoWidget/TodoWidget'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,6 +11,7 @@ function App() {
       <h1>My First React App</h1>
       <h2>~ Joeri</h2>
       <Counter />
+      <TodoWidget />
       <span>powered by:</span>
       <div>
         <a target="_blank" href="https://vitejs.dev/"><img  src={viteLogo} className="logo" alt="Vite logo"/></a> 
