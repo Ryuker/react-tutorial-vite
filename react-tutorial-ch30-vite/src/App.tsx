@@ -10,13 +10,19 @@ function App() {
     <>
       <h1>My First React App</h1>
       <h2>~ Joeri</h2>
+      
       <Counter />
-      <TodoWidget />
-      <span>powered by:</span>
+      <div>
+        <TodoWidget />
+      </div>
+
+    <div style={{bottom:0, marginTop: '20px' }}>
+    <span>powered by:</span>
       <div>
         <a target="_blank" href="https://vitejs.dev/"><img  src={viteLogo} className="logo" alt="Vite logo"/></a> 
         <a target="_blank" href="https://react.dev/"><img  src={reactLogo} className="logo react" alt="React logo"/></a>
       </div>
+    </div>
     </>
   )
 }

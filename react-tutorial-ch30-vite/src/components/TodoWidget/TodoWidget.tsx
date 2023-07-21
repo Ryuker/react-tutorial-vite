@@ -19,6 +19,10 @@ function TodoWidget() {
     setEntry("");
   }
 
+  function handleClearTodos(): void {
+    setTodos([]);
+  }
+
   const myWidgetStyle = {
     display: 'flex',
     justifyContent: 'space-between',
@@ -31,7 +35,7 @@ function TodoWidget() {
         <TodoForm entry={entry} onEntryChange={handleEntryChange} onFormSubmit={handleFormSubmit}/>
         <TodoList todos={todos}/>
       </div>
-      
+      <button onClick={handleClearTodos}>Clear Todos</button>
     </>
   )
 }
