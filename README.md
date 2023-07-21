@@ -1,2 +1,2 @@
 # react-tutorial-vite
-Vite react tutorial
+Vite React Tutorial portion of react-tutorial.app chapter 30
