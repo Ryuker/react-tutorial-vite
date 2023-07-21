@@ -1,6 +1,6 @@
 
 function TestComponent() {
-  return <p>Test Component</p>
+  return <p>Rendering my Test Component</p>
 }
 
 
