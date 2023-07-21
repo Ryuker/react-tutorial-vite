@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+    <p>My First React App - Joeri</p>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
