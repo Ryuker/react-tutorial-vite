@@ -1,7 +1,9 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 function Counter() {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {document.title = `${count} count`});
 
   function handleIncrement() {
     setCount(prevCounter => prevCounter + 1);
