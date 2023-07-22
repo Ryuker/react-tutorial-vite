@@ -8,7 +8,7 @@ function Counter() {
       document.title = "Welcome";
       return;
     }
-    document.title = `${count} count`
+    document.title = `${count} 'count' ${count === 1 ? 'click':'clicks'}`;
   });
 
   function handleIncrement() {
