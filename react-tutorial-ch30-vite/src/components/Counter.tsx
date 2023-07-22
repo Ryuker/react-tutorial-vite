@@ -18,7 +18,7 @@ function Counter() {
         <button onClick={handleIncrement}> + </button>
         <button onClick={handleDecrement}> - </button>
         <span>count is {count}</span>
-        <p>click '+'' and '-'' button to increment count</p>
+        <p>click '+'' and '-'' button to change count</p>
       </div>
     </>
   )
