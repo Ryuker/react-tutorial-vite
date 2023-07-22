@@ -4,7 +4,10 @@ function Counter() {
   const [count, setCount] = useState(0)
 
   // Log to console when component is mounted.
-  useEffect(() => {console.log("Done mounting Counter")},[]);
+  useEffect(() => { 
+    console.log("Done mounting Counter")
+    return () => { console.log("About to unmount Counter") };
+  },[]);
 
   useEffect(() => {
     if (count === 0){
