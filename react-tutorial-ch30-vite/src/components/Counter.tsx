@@ -3,7 +3,13 @@ import {useState, useEffect} from 'react'
 function Counter() {
   const [count, setCount] = useState(0)
 
-  useEffect(() => {document.title = `${count} count`});
+  useEffect(() => {
+    if (count === 0){
+      document.title = "Welcome";
+      return;
+    }
+    document.title = `${count} count`
+  });
 
   function handleIncrement() {
     setCount(prevCounter => prevCounter + 1);
