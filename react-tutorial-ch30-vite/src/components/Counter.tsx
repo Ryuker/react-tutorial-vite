@@ -3,6 +3,9 @@ import {useState, useEffect} from 'react'
 function Counter() {
   const [count, setCount] = useState(0)
 
+  // Log to console when component is mounted.
+  useEffect(() => {console.log("Done mounting Counter")},[]);
+
   useEffect(() => {
     if (count === 0){
       document.title = "Welcome";
@@ -20,7 +23,7 @@ function Counter() {
     return function cleanUpTimeoutTimer() {
       clearTimeout(timerID);
     }
-  });
+  }, [count]);
 
   function handleIncrement() {
     setCount(prevCounter => prevCounter + 1);
