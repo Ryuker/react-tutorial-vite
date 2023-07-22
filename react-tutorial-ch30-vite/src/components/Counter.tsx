@@ -15,8 +15,10 @@ function Counter() {
     <>
       <div className="card">
         <p>Rendering my Counter</p>
-        <button onClick={handleIncrement}> + </button>
-        <button onClick={handleDecrement}> - </button>
+        <div style={{display: 'flex'}} >
+          <button onClick={handleIncrement}> + </button>
+          <button onClick={handleDecrement}> - </button>
+        </div>
         <span>count is {count}</span>
         <p>click '+'' and '-'' button to change count</p>
       </div>
