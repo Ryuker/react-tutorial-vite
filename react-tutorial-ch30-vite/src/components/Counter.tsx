@@ -8,7 +8,18 @@ function Counter() {
       document.title = "Welcome";
       return;
     }
+
     document.title = `${count} 'count' ${count === 1 ? 'click':'clicks'}`;
+    
+    // display still in document.title  after 2 seconds have passed
+    const timerID = setTimeout(() => {
+      document.title = "Still there?";
+    }, 2_000);
+
+    // cleanupTimer to prevent memory leak
+    return function cleanUpTimeoutTimer() {
+      clearTimeout(timerID);
+    }
   });
 
   function handleIncrement() {
