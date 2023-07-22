@@ -11,6 +11,10 @@ function Counter() {
     setCount(prevCounter => prevCounter - 1);
   }
 
+  function handleReset() {
+    setCount(0);
+  }
+
   return (
     <>
       <div className="card">
@@ -20,6 +24,7 @@ function Counter() {
           <button onClick={handleDecrement}> - </button>
         </div>
         <span>count is {count}</span>
+        <button onClick={handleReset}> Reset </button>
         <p>click '+'' and '-'' button to change count</p>
       </div>
     </>
