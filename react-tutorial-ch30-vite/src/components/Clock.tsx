@@ -11,9 +11,11 @@ function Clock() {
     return () => { clearInterval(intervalID); } // clean up the interval when clock stops rendering to prevent memory leak.
   }, []);
 
-  return  <>
+  return (
+    <>
       <h2>Clock: {date.toLocaleTimeString()}</h2>
     </>
+  )
 }
 
 export default Clock;
