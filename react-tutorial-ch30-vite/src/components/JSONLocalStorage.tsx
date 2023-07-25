@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 
 function JSONLocalStorage() {
-  const [transactions, setTransactions] = useState<int[]>([]);
+  const [transactions, setTransactions] = useState<number[]>([]);
+
+  useEffect(() => {
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+  }, [transactions]);
 
   function handleDepositClick() {
     setTransactions([...transactions, 10]);
@@ -25,6 +29,10 @@ function JSONLocalStorage() {
       <button onClick={handleDepositClick}>Deposit 10</button>
       <button onClick={handleWithdrawClick}>Withdraw 10 </button>
       <button onClick={handleClearClick}>Reset</button>
+      <h3>transactions:</h3>
+      <ul>
+        { transactions.map((transaction, index) => <li key={index}>{transaction}</li>)}
+      </ul>
     </>
   )
 }
