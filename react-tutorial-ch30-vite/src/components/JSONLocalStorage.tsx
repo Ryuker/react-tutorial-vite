@@ -3,15 +3,7 @@ import { useState, useEffect } from "react";
 function JSONLocalStorage() {
   // retrieves transactions array from the key in local storage, only runs once. If no value has been set it just returns [].
   // string is parsed from json on array. 
-  const [transactions, setTransactions] = useState<number[]>(() => {
-    // parses object to array, parses empty array if key doesn't exist.
-    return JSON.parse(localStorage.getItem("transactions") ?? '[]'); 
-    //Alternative method
-    // const storageValue = localStorage.getItem('transactions') ?? "";    // get transactions key value, if it doesn't exist we return empty string.
-
-    // // parse object string to array if storage value isn't null, else return empty array.
-    // return storageValue === "" ? JSON.parse(storageValue) : [];          
-  });
+  const [transactions, setTransactions] = useState<number[]>(() => JSON.parse(localStorage.getItem("transactions") ?? "[]"));
 
   useEffect(() => {
     localStorage.setItem("transactions", JSON.stringify(transactions));
