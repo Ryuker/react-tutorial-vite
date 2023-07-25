@@ -1,7 +1,8 @@
 import { useState, useEffect, ChangeEvent } from "react";
 
 function PersistenGreeting(){
-  const [name, setName] = useState<string>(() => localStorage.getItem("name") ?? ""); // sets the name to the value in local storage
+  // retrieves name from the key in local storage, only runs once. If no value has been set it just return an empty string.
+  const [name, setName] = useState<string>(() => localStorage.getItem("name") ?? ""); 
 
   useEffect(() => { // stores the name in localStorage when the name changes
     localStorage.setItem("name", name);
