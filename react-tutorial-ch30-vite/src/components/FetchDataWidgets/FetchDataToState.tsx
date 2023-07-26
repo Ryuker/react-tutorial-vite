@@ -25,8 +25,8 @@ function FetchDataToState(){
   return(
     <>
       <h2>Fetch Data and store in state widget</h2>
-      <h3>{users?.map(user => `user: ${user.id} name: ${user.name} username: ${user.username}`)}</h3>
-      <h3>{JSON.stringify(users ?? "")}</h3>
+      <h3>{users && users.map(user => `user: ${user.id} name: ${user.name} username: ${user.username}`)}</h3>
+      <h3>{users && JSON.stringify(users)}</h3>
     </>
   )
 }
