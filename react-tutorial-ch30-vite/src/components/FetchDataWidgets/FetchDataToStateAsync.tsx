@@ -12,7 +12,7 @@ function FetchDataToStateAsync(){
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    (async () => { // runs this function async, fetches the data, enabled the loader and disables when data has been set
+    (async () => { // runs this function async, fetches the data, enables the loader and disables when data has been set
       try{
         setIsLoading(true);
         const response = await fetch("https://react-tutorial-demo.firebaseio.com/users.json")
