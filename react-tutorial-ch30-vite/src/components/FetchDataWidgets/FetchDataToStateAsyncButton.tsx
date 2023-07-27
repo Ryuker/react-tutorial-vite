@@ -17,7 +17,8 @@ function FetchDataToStateAsync(){
       setIsLoading(true);
       const response = await fetch("https://react-tutorial-demo.firebaseio.com/users.json")
       const data:IUser[] = await response.json();
-      setUsers(data);
+      if(data)
+        setUsers(data);
     }catch(error){
       console.log(error);
     }
