@@ -30,7 +30,7 @@ function FetchDataToStateAsync(){
   return(
     <>
       <h2>Fetch Data to State with Button using Async Await</h2>
-      <button onClick={handleLoadButtonClick}>
+      <button onClick={handleLoadButtonClick} disabled={isLoading}>
         {isLoading ? "Loading Users" : "Load Users"}
         </button>
       <h3>Users</h3>
