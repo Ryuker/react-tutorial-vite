@@ -15,12 +15,14 @@ function FetchDataUsingHook(){
   const data = get("users.json");
 
 
-  console.log(users);
+  console.log(data);
+  // const users = data.map((user:IUser) => {return {user}} )
 
   return (
     <>
       <h2>Fetch Data Using Custom Fetch Hook</h2>
       <h3>Display Data Here</h3>
+      {/* <p>{users}</p> */}
     </>
   )
 
