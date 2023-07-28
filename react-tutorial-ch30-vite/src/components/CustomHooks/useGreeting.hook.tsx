@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export  function useWelcomeGreeting(){
+export function useWelcomeGreeting(){
   console.log("Welcome to my greeting hook");
 }
 
