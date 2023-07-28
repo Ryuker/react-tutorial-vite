@@ -1,6 +1,6 @@
 //https://www.typescriptlang.org/docs/handbook/2/generics.html < typescript generics explained
 
-export default function Fetch(baseUrl:string){
+export default function useFetch(baseUrl:string){
 
   async function get<Type>(url:string): Promise<Type[]> {
     try{
@@ -18,12 +18,12 @@ export default function Fetch(baseUrl:string){
   return {get};
 }
 
-const {get} = Fetch("www.google.com");
+// const {get} = Fetch("www.google.com");
 
-const data: user[] = await get<user>("www.google.com");
-const users = await data.map(user => user);
+// const data: user[] = await get<user>("www.google.com");
+// const users = await data.map(user => user);
 
-users;
+// users;
 
 
 
