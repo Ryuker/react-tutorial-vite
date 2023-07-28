@@ -16,7 +16,7 @@ fetch("https://react-tutorial-demo.firebaseio.com/grades.json", {
 
 // Async-await variant 
 const grade = 50;
-async function addEntryToApi(event: FormEvent<HTMLFormElement>) {
+export async function addEntryToApi(event: FormEvent<HTMLFormElement>) {
   event.preventDefault();
   try{
       console.log("about to send:" + grade);
@@ -34,7 +34,7 @@ async function addEntryToApi(event: FormEvent<HTMLFormElement>) {
 
 // Async-await PUT variant - updates a value in the api that already exists
 const currency = "USD";
-async function updateEntryInApi(event: FormEvent<HTMLFormElement>) {
+export async function updateEntryInApi(event: FormEvent<HTMLFormElement>) {
   event.preventDefault();
   try{
       console.log("about to send:" + grade);
