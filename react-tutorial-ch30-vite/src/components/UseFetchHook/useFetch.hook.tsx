@@ -8,10 +8,11 @@ export default function Fetch(baseUrl:string){
       const data = await response.json();
       if (data )
         return data;   
+      return new Promise(() =>{"no data found"});
     }catch(error){
       console.log(error);
+      return new Promise(() =>{});
     }
-    return new Promise(() => {});
   }
 
   return {get};
@@ -19,8 +20,10 @@ export default function Fetch(baseUrl:string){
 
 const {get} = Fetch("www.google.com");
 
-const data: user[] = get<user>("www.google.com");
-const users: user[] = await data.map(user => user);
+const data: user[] = await get<user>("www.google.com");
+const users = await data.map(user => user);
+
+users;
 
 
 
