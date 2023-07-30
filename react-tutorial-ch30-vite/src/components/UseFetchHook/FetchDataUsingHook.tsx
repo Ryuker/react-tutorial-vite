@@ -1,4 +1,5 @@
-import useFetch from "./useFetch.hook";
+import useFetch from "./useFetchExperimental.hook";
+
 
 interface IUser {
   id: string;
@@ -12,7 +13,7 @@ function FetchDataUsingHook(){
   let users: IUser[] = [] ;
   const {get} = useFetch("https://react-tutorial-demo.firebaseio.com/")
 
-  const data = get("users.json");
+  const data = get<IUser>("users.json")
   console.log(data);
   
   if (Array.isArray(data))
