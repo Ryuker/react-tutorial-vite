@@ -6,6 +6,7 @@ function ThemeApp(){
 
   return (
     <ThemeProvider>
+      <h2>Theme Context Widget</h2>
       <ThemeButton />
     </ThemeProvider>
   )
