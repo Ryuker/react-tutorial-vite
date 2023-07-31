@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 
 function ThemeButton(){
-  const theme = useContext(ThemeContext);
+  const context = useContext(ThemeContext);
 
   return (
-    <button>Theme Button: {theme}</button>
+    <button>Theme Button: {context.theme}</button>
   )
 }
 
