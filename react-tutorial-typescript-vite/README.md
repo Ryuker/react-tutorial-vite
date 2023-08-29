@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+# React-Tutorial Components in Typescript using Vite
+React-Tutorial components rewritten in Typescript. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Shared as code demonstration and not ready for use on production. 
+Not all components have been imported on on the index page.
+----
 
-Currently, two official plugins are available:
+uses node 16.14.2
+~~~
+run nvm use 16
+run npm install
+~~~
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+~~~
+run npm run dev
+~~~
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+project is using vite with typescript support + SWC (Speedy Web Compiler)
+runs on localhost:3000
 
-- Configure the top-level `parserOptions` property like this:
+--------------
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+`npm run dev` - will start the development server. It uses the development version of React.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+`npm run build` - will build your application for deployment. It uses the production version of React.
+
+`npm run lint` - will check your code quality for common mistakes and potential improvements.
+
