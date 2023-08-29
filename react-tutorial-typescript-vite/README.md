@@ -5,14 +5,33 @@ Shared as code demonstration and not ready for use on production.
 Not all components have been imported on the index page.
 ----
 
+# To use Fetch functionality:
+- add `.env.development` to root folder with:
+~~~
+VITE_API_PATH="{your API path}"
+VITE_API_USERS_LOCATION="{your API users location}"
+VITE_API_CURRENCY_LOCATION="{Your API currency location}"
+VITE_API_GRADES_LOCATION="Your API grades location"
+~~~
+- ensure the api is returning a .json object. Some might require returning an Object Array when mapping through contents.
+
+
 uses node 16.14.2
+
+# To install
 ~~~
 run nvm use 16
 run npm install
 ~~~
 
+# To run
 ~~~
 run npm run dev
+~~~
+
+# To clonse
+~~~
+ctrl + c
 ~~~
 
 
