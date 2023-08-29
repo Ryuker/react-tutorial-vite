@@ -1,4 +1,5 @@
 import useFetch from "./useFetch.hook";
+import { API_PATH, API_USERS_LOCATION } from "../../utils/paths";
 
 interface IUser {
   id: string;
@@ -7,16 +8,16 @@ interface IUser {
 }
 
 function PostAndGetDataUsingHook(){
-  const {get, post, loading} = useFetch("https://react-tutorial-demo.firebaseio.com/");
+  const {get, post, loading} = useFetch(`${API_PATH}`);
 
   function handleGet(){
-    get("users.json")
+    get(`${API_USERS_LOCATION}`)
     return;
   }
 
   function handlePost(){
     const objectToPost:IUser = {id: "5", name: "Bob", username: "bobinator" };
-    post("users.json", objectToPost);
+    post(`${API_USERS_LOCATION}`, objectToPost);
   }
 
   return(

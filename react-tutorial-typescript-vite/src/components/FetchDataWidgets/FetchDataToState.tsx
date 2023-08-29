@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import Loader from './Loader';
+import { API_PATH, API_USERS_LOCATION } from "../../utils/paths";
 
 interface IUser {
   id: string;
@@ -15,7 +16,7 @@ function FetchDataToState(){
   // runs twice in development mode, fetches data after the component rendered, if there's no object in data yet.
   useEffect(() => {
     if (!users){
-      fetch("https://react-tutorial-demo.firebaseio.com/users.json")
+      fetch(`${API_PATH}${API_USERS_LOCATION}`)
       .then(response => response.json())
       .then((data:IUser[]) => {
         console.log(data);

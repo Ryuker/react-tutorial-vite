@@ -1,0 +1,6 @@
+const API_PATH: string = import.meta.env.VITE_API_PATH;
+const API_USERS_LOCATION: string = import.meta.env.VITE_API_USERS_LOCATION;
+const API_CURRENCY_LOCATION: string = import.meta.env.VITE_API_CURRENCY_LOCATION;
+const API_GRADES_LOCATION: string = import.meta.env.VITE_API_CURRENCY_LOCATION;
+
+export { API_PATH, API_USERS_LOCATION, API_CURRENCY_LOCATION, API_GRADES_LOCATION }; 

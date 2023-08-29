@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+import { API_PATH, API_USERS_LOCATION } from "../../utils/paths";
 
 //const fetcher = (...args) => fetch(...args).then(res => res.json())
 const fetcher = (url:string) => fetch(url).then(r => r.json())
@@ -11,7 +12,7 @@ interface IUser {
 
 //loads users from the api
 const Alias = () => {
-  const {data:users, isLoading, error} = useSWR<IUser[]>("https://react-tutorial-demo.firebaseio.com/users.json", fetcher);
+  const {data:users, isLoading, error} = useSWR<IUser[]>(`${API_PATH}${API_USERS_LOCATION}`, fetcher);
   if (isLoading) return <h3>Loading Users</h3>
   if (users) 
     return <ul>{users?.map((user) => <li key={user.id}>{`user: ${user.id} name: ${user.name} username: ${user.username}`}</li>)}</ul>
@@ -20,7 +21,7 @@ const Alias = () => {
 };
 
 function FetchDataToState(){
-  const {data:users} = useSWR<IUser[]>("https://react-tutorial-demo.firebaseio.com/users.json", fetcher);
+  const {data:users} = useSWR<IUser[]>(`${API_PATH}${API_USERS_LOCATION}`, fetcher);
 
   return(
     <>

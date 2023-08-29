@@ -1,7 +1,8 @@
 import { FormEvent } from "react";
+import { API_PATH, API_GRADES_LOCATION } from "../../utils/paths";
 
 // for reference only
-fetch("https://react-tutorial-demo.firebaseio.com/grades.json", {
+fetch(`${API_PATH}/${API_GRADES_LOCATION}`, {
     method: "POST", // specified we are sending something
     headers: {
         "Content-Type": "application/json" // the format we're sending to the api
@@ -20,7 +21,7 @@ export async function addEntryToApi(event: FormEvent<HTMLFormElement>) {
   event.preventDefault();
   try{
       console.log("about to send:" + grade);
-      await fetch("https://api.learnjavascript.online/demo/react/grades", { 
+      await fetch(`${API_PATH}/${API_GRADES_LOCATION}`, { 
           method:"POST", 
           headers: {"Content-Type": "application/json"}, 
           body: JSON.stringify({grade: grade})
@@ -38,7 +39,7 @@ export async function updateEntryInApi(event: FormEvent<HTMLFormElement>) {
   event.preventDefault();
   try{
       console.log("about to send:" + grade);
-      await fetch("https://api.learnjavascript.online/demo/react/grades", { 
+      await fetch(`${API_PATH}/${API_GRADES_LOCATION}`, { 
           method:"POST", 
           headers: {"Content-Type": "application/json"}, 
           body: JSON.stringify({currency: currency})

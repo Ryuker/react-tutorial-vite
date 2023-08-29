@@ -1,4 +1,5 @@
 import useFetch from "./useFetchExperimental.hook";
+import { API_PATH, API_USERS_LOCATION } from "../../utils/paths";
 
 
 interface IUser {
@@ -11,9 +12,9 @@ interface IUser {
 // doesn't work well yet
 function FetchDataUsingHook(){
   let users: IUser[] = [] ;
-  const {get} = useFetch("https://react-tutorial-demo.firebaseio.com/")
+  const {get} = useFetch(`${API_PATH}`)
 
-  const data = get<IUser>("users.json")
+  const data = get<IUser>(`${API_USERS_LOCATION}`)
   console.log(data);
   
   if (Array.isArray(data))

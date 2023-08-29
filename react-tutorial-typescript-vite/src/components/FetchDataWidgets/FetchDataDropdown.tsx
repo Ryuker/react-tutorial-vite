@@ -1,4 +1,5 @@
 import { useState, ChangeEvent, useEffect } from "react";
+import { API_PATH, API_CURRENCY_LOCATION } from "../../utils/paths";
 
 function FetchDataDropdown() {
   const [currency, setCurrency] = useState<string>("");
@@ -9,7 +10,7 @@ function FetchDataDropdown() {
   useEffect(() => {
     if(currency){
       setIsLoading(true);
-      fetch(`https://react-tutorial-demo.firebaseio.com/currencies/${currency}.json`)
+      fetch(`${API_PATH}${API_CURRENCY_LOCATION}/${currency}.json`)
       .then(response => response.json())
       .then((data:number) =>{
         if(data)
