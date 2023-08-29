@@ -1,5 +1,5 @@
 # React-Tutorial Components in Typescript using Vite
-React Tutorial components rewritten in Typescript
+React-Tutorial components rewritten in Typescript. 
 
 uses node 16.14.2
 ~~~
@@ -15,6 +15,7 @@ run npm run dev
 project is using vite with typescript support + SWC (Speedy Web Compiler)
 runs on localhost:3000
 
+--------------
 
 `npm run dev` - will start the development server. It uses the development version of React.
 
