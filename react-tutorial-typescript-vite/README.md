@@ -2,7 +2,7 @@
 React-Tutorial components rewritten in Typescript. 
 
 Shared as code demonstration and not ready for use on production. 
-Not all components have been imported on on the index page.
+Not all components have been imported on the index page.
 ----
 
 uses node 16.14.2
