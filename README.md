@@ -1,4 +1,4 @@
-# React-Tutorial in Typescript using Vite
+# React-Tutorial Components in Typescript using Vite
 React Tutorial components rewritten in Typescript
 
 uses node 16.14.2
