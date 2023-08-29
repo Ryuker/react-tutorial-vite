@@ -1,7 +1,7 @@
-// URL: https://react-tutorial-demo.firebaseio.com/users.json
+import { API_PATH, API_USERS_LOCATION } from "../../utils/paths";
 
 function init(){
-  fetch("https://react-tutorial-demo.firebaseio.com/users.json")
+  fetch(`${API_PATH}${API_USERS_LOCATION}`)
   .then(response => response.json())
   .then(data => {
     console.log(data);

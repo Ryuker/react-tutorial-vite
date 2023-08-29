@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Loader from "./Loader";
+import { API_PATH, API_USERS_LOCATION } from "../../utils/paths";
 
 interface IUser {
   id: string;
@@ -15,7 +16,7 @@ function FetchDataToStateAsync(){
     (async () => { // runs this function async, fetches the data, enables the loader and disables when data has been set
       try{
         setIsLoading(true);
-        const response = await fetch("https://react-tutorial-demo.firebaseio.com/users.json")
+        const response = await fetch(`${API_PATH}${API_USERS_LOCATION}`)
         const data:IUser[] = await response.json();
         setUsers(data);
       }catch(error){
