@@ -4,6 +4,7 @@ React Tutorial components rewritten in Typescript
 uses node 16.14.2
 ~~~
 run nvm use 16
+run npm install
 ~~~
 
 ~~~
